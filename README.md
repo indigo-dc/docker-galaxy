@@ -19,6 +19,7 @@ Wait a few minutes after starting the container and access `http://localhost:327
 GALAXY_SSH_PORT=$(docker port docker-galaxy | grep 22 | awk '{split($3,t,":"); print t[2]}')
 ssh -p $GALAXY_SSH_PORT root@localhost
 ```
+The password to access via SSH is documented in the base image ([indigodatacloud/ubuntu-sshd](https://hub.docker.com/r/indigodatacloud/ubuntu-sshd/)).
 
 ## Build the image
 ```

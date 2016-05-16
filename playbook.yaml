@@ -3,4 +3,4 @@
   connection: local
   become: true
   roles:
-    - { role: indigo-dc.galaxy, GALAXY_VERSION: 16.01, GALAXY_LAUNCH_DAEMON: false, galaxy_install_path: /opt/galaxy}
+    - { role: indigo-dc.galaxy, GALAXY_VERSION: 16.01, GALAXY_LAUNCH_DAEMON: false, galaxy_install_path: /home/galaxy/galaxy}
