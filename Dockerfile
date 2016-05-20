@@ -1,4 +1,5 @@
 FROM indigodatacloud/ubuntu-sshd:14.04
+
 MAINTAINER gmolto@dsic.upv.es
 
 COPY ["playbook.yaml","entrypoint.sh","/"]

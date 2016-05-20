@@ -3,9 +3,9 @@ Docker image containing the [Galaxy](https://galaxyproject.org) platform
 
 ## Run the image from the Docker Hub
 ```
-docker run -d -P --name docker-galaxy indigodatacloud/docker-galaxy
+docker run -d -P --name docker-galaxy indigodatacloudapps/docker-galaxy
 ```
-The Docker image is available in the [indigodatacloud/docker-galaxy](https://hub.docker.com/r/indigodatacloud/docker-galaxy/) repository at Docker Hub.
+The Docker image is available in the [indigodatacloudapps/docker-galaxy](https://hub.docker.com/r/indigodatacloudapps/docker-galaxy/) repository at Docker Hub.
 
 
 ### Access via web
