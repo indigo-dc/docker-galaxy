@@ -6,10 +6,6 @@ ENV container docker
 
 COPY ["playbook.yaml","/"]
 
-RUN yum -y install epel-release && \
-    yum -y update && \
-    yum -y install sudo ansible git
-
 RUN ansible-galaxy install indigo-dc.galaxycloud
 
 RUN echo "localhost" > /etc/ansible/hosts
