@@ -3,4 +3,5 @@
   connection: local
   become: true
   roles:
-    - { role: indigo-dc.galaxy, GALAXY_VERSION: 16.01, GALAXY_LAUNCH_DAEMON: false, galaxy_install_path: /home/galaxy/galaxy}
+    - { role: indigo-dc.galaxycloud, GALAXY_ADMIN_EMAIL: "ma.tangaro@gmail.com", GALAXY_ADMIN_USERNAME: "mtangaro", galaxy_flavor: "galaxy-NGS", galaxy_instance_key_pub: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDy787GZIVdHW7QV+Wu2q9q5k5CiTOq04ENioVig88IIVGNqi8qiX+3fhZx/w2hhlz6AePrYu8CfVPplCRdSMjP46av53V1M7r0+yqJvuk1PC2f/rSoEL95TvaeiV28+5Wy4MC58UvYuewuhIHcbfPiXHf3NEE3scd38GXCYKLhAP28mUQ950Ar4SoWv4irv21maJwkwqn5AYXcy1yrbBZtaTbQELVPa/E6X9j+k29bn32ITmmtKBA3ne/QlFRaaYI3XggvMXhhSSIYsJUdlSOjUTriB2DraHsxMGfOPjmPXkjvrXp9MfOzjMg10fb7K2Mda8u/ujK/dvx3BnhlSIpn marco@marco-Latitude-3440", supervisor_manage_postgres: "True", supervisor_manage_nginx: "True", supervisor_manage_proftpd: "True" }
+

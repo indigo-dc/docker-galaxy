@@ -9,10 +9,10 @@ The Docker image is available in the [indigodatacloudapps/docker-galaxy](https:/
 
 
 ### Access via web
-You have to check the mapped port with `docker port docker-galaxy | grep 8080`.
-The command should return something like `8080/tcp -> 0.0.0.0:32770`.
+You have to check the mapped port with `docker port docker-galaxy | grep 80`.
+The command should return something like `80/tcp -> 0.0.0.0:32770`.
 
-Wait a few minutes after starting the container and access `http://localhost:32770`
+Wait a few minutes after starting the container and access `http://localhost:32770/galaxy`
 
 ### Access through ssh
 ```
