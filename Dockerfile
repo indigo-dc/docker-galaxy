@@ -1,17 +1,21 @@
-FROM indigodatacloud/ubuntu-sshd:14.04
+FROM indigodatacloud/centos-sshd:7
 
-MAINTAINER gmolto@dsic.upv.es
+MAINTAINER ma.tangaro@gmail.com
 
-COPY ["playbook.yaml","entrypoint.sh","/"]
+ENV container docker
 
-RUN ansible-galaxy install indigo-dc.galaxy
+COPY ["playbook.yaml","/"]
+
+RUN yum -y install epel-release && \
+    yum -y update && \
+    yum -y install sudo ansible git
+
+RUN ansible-galaxy install indigo-dc.galaxycloud
 
 RUN echo "localhost" > /etc/ansible/hosts
 
 RUN ansible-playbook /playbook.yaml
 
-EXPOSE 22 8080
+EXPOSE 21 22 80
 
-ENTRYPOINT ["/entrypoint.sh"]
-
-CMD ["/usr/sbin/sshd", "-D"]
+CMD /etc/init.d/vmcontext start; /usr/bin/galaxy-startup; /usr/sbin/sshd -D
